@@ -5,17 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/index.html"
+    "dev": "parcel ./src/index.html",
+    "prod": "parcel build ./src/index.html -d public"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
+    "cssnano": "^4.1.10",
     "sass": "^1.18.0"
-  },
-  "dependencies": {
-    "highlight.js": "^9.15.6",
-    "toastmejs": "^1.2.1"
   }
 }
