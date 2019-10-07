@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel=icon type=image/png sizes=32x32 href=./assets/img/favicon-32x32.png>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atelier-cave-dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/toastmejs@latest/dist/css/toastme.css">
   <script src="https://unpkg.com/toastmejs@latest/dist/js/toastme.min.js" ></script>
 
@@ -173,7 +174,8 @@ const config = {
     distanceY: 20, // Integer value
     distanceX: 20, // Integer value
     zIndex: 100, // Integer value
-    theme: "default" // default, ligh or  dark (leave empty for "default" theme)
+    theme: "default", // default, ligh or  dark (leave empty for "default" theme)
+    duplicates: false // true or false - by default it's false
 };
 
 //Create a new Toastmejs class instance
@@ -199,6 +201,7 @@ mytoast.success("Hello, this is my custom notification!");
                   <li><strong>distanceX:</strong> distance from the X axis</li>
                   <li><strong>zIndex:</strong> overlapping order</li>
                   <li><strong>theme:</strong> default, ligh or dark (leave empty for "default" theme)</li>
+                  <li><strong>duplicates:</strong> set this 'true' or 'false' - by default it's false</li>
               </ol>
             </div>
           </div>
@@ -321,7 +324,7 @@ toastme.yesNoDialog({
       </div>
     </section>
   
-
+    <script>hljs.initHighlightingOnLoad();</script>
   <script src="./assets/js/index.js"></script>
 
   <script>
@@ -350,7 +353,8 @@ function simpleNotifications(param) {
 const lighNotificationsConfig = {
     positionY: "top", // top or bottom
     positionX: "center", // right left, center
-    theme: "ligh" // default, ligh or  dark (leave empty for "default" theme)
+    theme: "ligh", // default, ligh or  dark (leave empty for "default" theme)
+    duplicates: true
 }
 
 const lighToast = new Toastme(lighNotificationsConfig);
